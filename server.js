@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // Telegram Bot Configuration
 const TELEGRAM_BOT_TOKEN = '7951775121:AAGwQ2YJUV1RpSat5EPPsWiB_tbMUbijQ3k';
-const TELEGRAM_CHAT_ID = '791282594'; // Замените на ваш chat_id
+const TELEGRAM_CHAT_ID = '5076615429'; // Замените на ваш chat_id
 
 const bot = new TelegramBot(TELEGRAM_BOT_TOKEN, { polling: false });
 
