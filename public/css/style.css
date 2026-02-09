@@ -1,0 +1,338 @@
+/* ==================== ПОДКЛЮЧЕНИЕ ШРИФТОВ ==================== */
+@font-face {
+    font-family: 'Saint Amour';
+    src: url('/fonts/Saint Amour Script.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Leotaro';
+    src: url('/fonts/Leotaro-Regular_0.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --gold: #C8A882;
+    --dark: #2C2C2C;
+    --bg: #FAF8F5;
+    --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    /* Основной шрифт для всего сайта */
+    font-family: 'Leotaro', sans-serif; 
+    background-color: var(--bg);
+    color: var(--dark);
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px; /* Чуть крупнее для читабельности рукописного шрифта */
+    line-height: 1.4;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    min-height: 100vh; /* Используем min-height для мобильных */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    padding: 60px 0;
+}
+
+.save-the-date {
+    /* Шрифт Saint Amour */
+    font-family: 'Saint Amour', serif;
+    font-size: clamp(6rem, 12vw, 8rem); /* Увеличен размер для script шрифта */
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 35px;
+    color: var(--dark);
+    line-height: 1.1;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.photo-wrapper {
+    position: relative;
+    aspect-ratio: 3/5; /* Сохраняет пропорции фото */
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ЦИФРЫ НА ФОТО */
+.photo-date-overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    padding-bottom: 20px;
+    
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 40%);
+    
+    /* ИЗМЕНЕНИЯ ЗДЕСЬ: */
+    font-family: 'Saint Amour', serif; /* Шрифт как у Save the Date */
+    font-weight: normal; /* Не жирный */
+    font-size: clamp(4.5rem, 16vw, 10rem); /* Значительно увеличили размер */
+    color: var(--white);
+    line-height: 0.8; /* Чтобы цифры не "подпрыгивали" слишком высоко */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.names-block { text-align: center; margin-top: 20px; }
+.bride-name, .groom-name { 
+    font-family: 'Saint Amour', serif; /* Шрифт как у Save the Date */
+    font-weight: normal; /* Не жирный */
+    font-size: clamp(4rem, 10vw, 7rem); /* Увеличили размер */
+    line-height: 1;
+    color: var(--dark);
+}
+.ampersand { 
+    font-family: 'Saint Amour', serif; /* Красивый амперсанд */
+    font-size: 3rem; 
+    color: var(--gold); 
+    margin: 5px 0; 
+}
+
+/* ==================== CALENDAR ==================== */
+.invitation-section { padding: 60px 0; text-align: center; }
+.invitation-text { margin-bottom: 40px; font-size: 1.3rem; }
+.highlight { color: var(--gold); margin-top: 10px; display: block; }
+
+.calendar {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+.calendar-header { 
+    /* Шрифт Saint Amour */
+    font-family: 'Saint Amour', serif; 
+    font-size: 3rem; 
+    margin-bottom: 20px; 
+    color: var(--dark);
+    line-height: 1;
+}
+
+.calendar-weekdays, .calendar-days { 
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 5px; 
+}
+
+.calendar-weekdays div { 
+    font-size: 1rem; 
+    color: var(--gold); 
+    padding-bottom: 10px; 
+}
+
+.day { 
+    /* ИСПРАВЛЕНИЕ РАСТЯГИВАНИЯ */
+    aspect-ratio: 1 / 1; /* Заставляет блоки быть квадратными */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem; 
+    position: relative;
+}
+
+.wedding-day { 
+    background: var(--gold); 
+    color: white; 
+    border-radius: 50%; 
+}
+
+.heart-outline {
+    position: absolute; width: 100%; height: 100%;
+    top: 0; left: 0;
+    stroke: white; fill: none; stroke-width: 2;
+    transform: scale(0.8);
+}
+
+/* ==================== SCHEDULE & OTHERS ==================== */
+.schedule-section { padding: 60px 0; background: #fff; }
+.section-title { 
+    font-family: 'Leotaro', serif; 
+    font-weight: normal;
+    font-size: clamp(2.5rem, 5vw, 4rem); 
+    text-align: center; 
+    margin-bottom: 5px; 
+}
+
+.minimal-timeline {
+    max-width: 600px;
+    margin: 0 auto;
+    border-left: 1px solid var(--gold);
+    padding-left: 30px;
+}
+
+.timeline-point { position: relative; margin-bottom: 40px; }
+.timeline-point::before {
+    content: ''; position: absolute; left: -36px; top: 5px;
+    width: 11px; height: 11px; background: var(--gold); border-radius: 50%;
+    border: 3px solid #fff; /* Делаем точку красивее */
+    box-shadow: 0 0 0 1px var(--gold);
+}
+
+.timeline-point .time { 
+    font-family: 'Leotaro', serif; 
+    font-weight: bold; 
+    color: var(--gold); 
+    font-size: 1.5rem; 
+}
+
+.map-link {
+    background: none; border: none; border-bottom: 1px dashed var(--gold);
+    color: var(--gold); cursor: pointer; font-family: inherit; margin-top: 5px; font-size: 1rem;
+}
+.map-drop { margin-top: 15px; display: none; }
+
+/* ==================== DRESS CODE ==================== */
+.dresscode-section { padding: 60px 0; }
+.dresscode-subtitle { text-align: center; margin-bottom: 30px; }
+.color-row { display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; }
+.c-dot { width: 50px; height: 50px; border-radius: 50%; }
+
+.tetris-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на мобильном */
+    gap: 10px;
+}
+@media (min-width: 768px) {
+    .tetris-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.t-item img { width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+.t-item.tall { grid-row: span 2; }
+
+/* ==================== RSVP & FORM ==================== */
+.details-clean { max-width: 600px; margin: 0 auto; }
+.d-row {text-align: center; display: flex; gap: 20px; margin-bottom: 20px; align-items: flex-start; }
+.d-icon { font-size: 1.8rem; line-height: 1; }
+
+.rsvp-section { padding: 60px 0; background: white; }
+.minimal-form { max-width: 500px; margin: 0 auto; }
+.input-group { margin-bottom: 25px; }
+.minimal-form input[type="text"], .minimal-form textarea {
+    width: 100%; background: none; border: none; border-bottom: 1px solid #ccc;
+    padding: 10px 0; font-family: inherit; font-size: 1.2rem; outline: none;
+    border-radius: 0;
+}
+.radio-minimal label { display: block; margin-bottom: 10px; cursor: pointer; font-size: 1.1rem; }
+.radio-minimal input { margin-right: 10px; }
+
+.btn-minimal {
+    width: 100%; padding: 15px; background: var(--dark); color: white;
+    border: none; font-family: 'Leotaro', serif; font-size: 1.3rem;
+    cursor: pointer; border-radius: 30px; margin-top: 20px;
+}
+
+/* ==================== COUNTDOWN TIMER ==================== */
+.countdown-section {
+    padding: 80px 0;
+    text-align: center;
+    background: #fff;
+    margin-bottom: 40px;
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.count-item {
+    text-align: center;
+}
+
+.count-item span {
+    /* Шрифт Saint Amour */
+    font-family: 'Leotaro', serif;
+    font-size: clamp(3rem, 10vw, 5rem);
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+}
+
+.count-item p {
+    /* Оставляем Leotaro для подписей, чтобы читалось */
+    font-family: 'Leotaro', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    opacity: 0.6;
+}
+
+.count-divider {
+    font-family: 'Saint Amour', serif;
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 25px; /* Выравнивание двоеточия */
+}
+
+/* ==================== FOOTER & ANIMATIONS ==================== */
+.footer { padding: 40px 0; text-align: center; border-top: 1px solid #eee; }
+.footer { 
+    padding: 50px 0; 
+    text-align: center; 
+    border-top: 1px solid #eee; 
+}
+
+.footer p { 
+    font-family: 'Saint Amour', serif; 
+    font-weight: normal; 
+    font-size: 3.5rem; /* Большой размер для имен */
+    margin-bottom: 10px; 
+    line-height: 1;
+}
+
+.footer span { 
+    font-family: 'Leotaro', serif; 
+    font-weight: normal;
+    font-size: 2.5rem; /* Большой размер для даты */
+    color: var(--gold); 
+    display: block;
+}
+
+/* Анимации появления */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+    .photo-grid { gap: 5px; }
+    .countdown-display { gap: 10px; }
+    .count-divider { display: none; } /* Скрываем двоеточия на очень мелких экранах, если мешают */
+}

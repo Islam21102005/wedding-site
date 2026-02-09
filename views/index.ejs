@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дарина & Олег | 12.02.2026</title>
+    <!-- Google Fonts удалены, используются локальные из public/fonts/ -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Шрифт Saint Amour применится через класс save-the-date -->
+            <h1 class="save-the-date" data-aos="fade-down">Save the Date</h1>
+            <div class="container">
+                <div class="photo-grid">
+                    <div class="photo-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="photo-wrapper">
+                            <img src="/images/photo1.jpg" alt="12">
+                            <!-- Цифры будут внизу и крупнее -->
+                            <div class="photo-date-overlay">12</div>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="photo-wrapper">
+                            <img src="/images/photo2.jpg" alt="02">
+                            <div class="photo-date-overlay">02</div>
+                        </div>
+                    </div>
+                    <div class="photo-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="photo-wrapper">
+                            <img src="/images/photo3.jpg" alt="26">
+                            <div class="photo-date-overlay">26</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="names-block" data-aos="zoom-in">
+                    <h2 class="bride-name">Дарина & Олег</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Invitation & Calendar -->
+    <section class="invitation-section">
+        <div class="container">
+            <div class="invitation-text" data-aos="fade-up">
+                <p class="text-line">Дорогие гости!</p>
+                <p class="text-line">Скоро наступит день, когда мы скажем друг другу "ДА".</p>
+                <p class="text-line highlight">Будем счастливы видеть вас на нашей свадьбе!</p>
+            </div>
+
+            <div class="calendar-wrapper" data-aos="flip-left">
+                <div class="calendar">
+                    <!-- Шрифт Saint Amour здесь -->
+                    <div class="calendar-header">Февраль 2026</div>
+                    <div class="calendar-weekdays">
+                        <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+                    </div>
+                    <div class="calendar-days">
+                        <div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div><div class="day empty"></div>
+                        <div class="day">1</div><div class="day">2</div><div class="day">3</div><div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div><div class="day">11</div>
+                        <div class="day wedding-day">
+                            <span>12</span>
+                            <svg class="heart-outline" viewBox="0 0 100 100">
+                                <path d="M50,85 C50,85 15,60 15,40 C15,25 25,15 35,15 C42,15 48,20 50,25 C52,20 58,15 65,15 C75,15 85,25 85,40 C85,60 50,85 50,85 Z" />
+                            </svg>
+                        </div>
+                        <div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div><div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day">24</div><div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minimalist Schedule -->
+    <section class="schedule-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Программа дня</h2>
+            <div class="minimal-timeline">
+                <div class="timeline-point" data-aos="fade-left">
+                    <div class="time">12:00</div>
+                    <div class="desc">
+                        <h3>Сбор гостей</h3>
+                        <p>Дворец бракосочетания, ул. Примерная, 1</p>
+                        <button class="map-link" onclick="toggleMap('map1')">показать на карте</button>
+                        <div id="map1" class="map-drop">
+                             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A72294bb375efaede231f1e26646c2c5a982bacc735ae609db8bacb69e5e1f30d&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-point" data-aos="fade-left" data-aos-delay="100">
+                    <div class="time">12:30</div>
+                    <div class="desc">
+                        <h3>Церемония</h3>
+                        <p>Начало официальной части</p>
+                    </div>
+                </div>
+                <div class="timeline-point" data-aos="fade-left" data-aos-delay="200">
+                    <div class="time">15:00</div>
+                    <div class="desc">
+                        <h3>Банкет</h3>
+                        <p>Ресторан "Название", ул. Примерная, 2</p>
+                        <button class="map-link" onclick="toggleMap('map2')">показать на карте</button>
+                        <div id="map2" class="map-drop">
+                            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A72294bb375efaede231f1e26646c2c5a982bacc735ae609db8bacb69e5e1f30d&amp;source=constructor" width="100%" height="300" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-point" data-aos="fade-left" data-aos-delay="300">
+                    <div class="time">19:30</div>
+                    <div class="desc">
+                        <h3>Завершение</h3>
+                        <p>Торт и праздничный финал</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code Tetris -->
+    <section class="dresscode-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Дресс-код</h2>
+            <p class="dresscode-subtitle">Будем признательны, если вы поддержите палитру нашей свадьбы</p>
+            
+            <div class="color-row">
+                <div class="c-dot" style="background: #C8A882;" data-aos="zoom-in"></div>
+                <div class="c-dot" style="background: #E8DCC4;" data-aos="zoom-in" data-aos-delay="100"></div>
+                <div class="c-dot" style="background: #8B7355;" data-aos="zoom-in" data-aos-delay="200"></div>
+                <div class="c-dot" style="background: #4A4A4A;" data-aos="zoom-in" data-aos-delay="300"></div>
+            </div>
+
+            <div class="tetris-grid">
+                <div class="t-item tall" data-aos="fade-up"><img src="/images/dress1.jpg"></div>
+                <div class="t-item" data-aos="fade-up"><img src="/images/dress2.jpg"></div>
+                <div class="t-item wide" data-aos="fade-up"><img src="/images/dress3.jpg"></div>
+                <div class="t-item" data-aos="fade-up"><img src="/images/dress4.jpg"></div>
+                <div class="t-item tall" data-aos="fade-up"><img src="/images/dress5.jpg"></div>
+                <div class="t-item" data-aos="fade-up"><img src="/images/dress6.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Minimal -->
+    <section class="details-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Детали</h2>
+            <div class="details-clean">
+                <div class="d-row" data-aos="fade-right">
+                    <p>Ваши пожелания в конвертах помогут нам осуществить мечту о свадебном путешествии.</p>
+                </div>
+                <div class="d-row" data-aos="fade-right" data-aos-delay="100">
+                    <p>Пожалуйста, дайте нам знать о ваших предпочтениях в напитках и аллергиях в анкете ниже.</p>
+                </div>
+                <div class="d-row" data-aos="fade-right" data-aos-delay="200">
+                    <p>Мы будем рады видеть на празднике только взрослых гостей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Minimal -->
+    <section class="rsvp-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Анкета гостя</h2>
+            <p class="rsvp-info">Пожалуйста, заполните форму до 20.01.2026</p>
+            
+            <form id="rsvpForm" class="minimal-form" data-aos="fade-up">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" placeholder="Ваше Имя и Фамилия" required>
+                </div>
+                
+                <div class="radio-minimal">
+                    <p style="margin-bottom: 15px; font-weight: bold;">Придете ли вы?</p>
+                    <label><input type="radio" name="attendance" value="Приду" required> <span>Я приду</span></label>
+                    <label><input type="radio" name="attendance" value="Не приду"> <span>Не смогу</span></label>
+                    <label><input type="radio" name="attendance" value="Сообщу позже"> <span>Сообщу позже</span></label>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="drinks" name="drinks" placeholder="Предпочтения по алкоголю">
+                </div>
+
+                <div class="input-group">
+                    <textarea id="food" name="food" placeholder="Предпочтения по еде / Аллергии" rows="2"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn btn-minimal">
+                    <span>Отправить</span>
+                    <div class="btn-shine"></div>
+                </button>
+                <div id="formMessage" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" data-aos="fade-up">
+        <div class="container">
+            <!-- Текст таймера Saint Amour -->
+            <h2 class="section-title" style="font-family: 'Leotaro', serif; font-size: 1.5rem;">До торжества осталось</h2>
+            <div id="countdown" class="countdown-display">
+                <div class="count-item">
+                    <span id="days">00</span>
+                    <p>дней</p>
+                </div>
+                <div class="count-divider">:</div>
+                <div class="count-item">
+                    <span id="hours">00</span>
+                    <p>часов</p>
+                </div>
+                <div class="count-divider">:</div>
+                <div class="count-item">
+                    <span id="minutes">00</span>
+                    <p>минут</p>
+                </div>
+                <div class="count-divider">:</div>
+                <div class="count-item">
+                    <span id="seconds">00</span>
+                    <p>секунд</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p> С любовью,</p>
+        <p>Дарина & Олег</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
